@@ -1,14 +1,14 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { Cross2Icon } from "@radix-ui/react-icons"
 import React, { useEffect, useState } from "react"
-import { useGetTodosQuery, usePostTodoMutation } from "../../app/ApiSlice"
+import { useGetTodoQuery, usePostTodoMutation } from "../../app/ApiSlice"
 import "./styles.css"
 
 const AddTask = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [addtaskmutation, res] = usePostTodoMutation()
 
-	const query = useGetTodosQuery()
+	const query = useGetTodoQuery()
 
 	const handleSubmit = (e) => {
 		e.preventDefault()

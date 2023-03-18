@@ -1,12 +1,12 @@
 import * as AlertDialog from "@radix-ui/react-alert-dialog"
 import React, { useEffect } from "react"
 
-import { useDeleteTodoMutation, useGetTodosQuery } from "../../app/ApiSlice"
+import { useDeleteTodoMutation, useGetTodoQuery } from "../../app/ApiSlice"
 import "./style.css"
 
 const DeleteTask = ({ id }) => {
 	const [deleteTaskmutation, res] = useDeleteTodoMutation()
-	const query = useGetTodosQuery()
+	const query = useGetTodoQuery()
 	const handleClickdelete = () => {
 		deleteTaskmutation(id)
 	}

@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://zoo-api-nhvk.onrender.com/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://meliani.onrender.com/" }),
   endpoints: (builder) => ({
     Login: builder.mutation({
       query: (data) => ({
@@ -45,4 +45,4 @@ export const apiSlice = createApi({
   })
 })
 
-export const { useGetTodoQuery, usePostTodoMutation, useDeleteTodoMutation, useLoginMutation, useSignupMutation, useChecktokenMutation } = apiSlice
+export const { useGetTodoQuery, usePostTodoMutation, useDeleteTodoMutation, useLoginMutation, useSignupMutation, useChecktokenMutation } = apiSlice;
